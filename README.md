@@ -16,7 +16,8 @@
 - публиковать статический frontend через GitHub Pages.
 
 ## 2. Адреса
-Два кошелька, адреса докину
+1) STA1EXC25DJHACX60A8CRCARTPB1VVS7GX9KR6TG
+2) ST1JY0CXQP0VB4A97507JGQFHYEQT4KGBQ4NX9J1
 
 ## 3. Выбранная сеть
 - Сеть: `Stacks Testnet`
