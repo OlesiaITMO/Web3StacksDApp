@@ -262,17 +262,6 @@ app.innerHTML = `
 
     <section class="section section-grid section-grid--double">
       <article class="panel">
-        <p class="panel__eyebrow">Deployment</p>
-        <h2 class="panel__title">Что нужно сделать перед демонстрацией</h2>
-        <ul class="list">
-          <li>Развернуть оба контракта в testnet и подставить адрес деплойера в конфиг приложения.</li>
-          <li>Выполнить mint токенов владельцем и создать первый пул ликвидности.</li>
-          <li>Опубликовать статический фронтенд через GitHub Pages или Render.</li>
-          <li>Добавить в README итоговые ссылки на explorer и публичный URL приложения.</li>
-        </ul>
-      </article>
-
-      <article class="panel">
         <p class="panel__eyebrow">Explorer</p>
         <h2 class="panel__title">Последняя транзакция</h2>
         <div class="stack">
