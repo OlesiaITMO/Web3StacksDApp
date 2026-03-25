@@ -23,10 +23,15 @@ check_checker = { trusted_sender = false, trusted_caller = false, callee_filter 
 
 [contracts]
 
-[contracts.lab-token]
-path = "contracts/lab-token.clar"
+[contracts.lab-token-2]
+path = "contracts/lab-token-2.clar"
 clarity_version = 4
-epoch = "latest"
+epoch = "3.3"
+
+[contracts.liquidity-pool]
+path = "contracts/liquidity-pool.clar"
+clarity_version = 4
+epoch = "3.3"
 
 [networks.testnet]
 node_rpc_address = "https://api.testnet.hiro.so"
@@ -36,3 +41,15 @@ deployment_fee_rate = 10
 name = "deployer"
 mnemonic = "${DEPLOYER_MNEMONIC}"
 balance = 100000000
+
+[[accounts]]
+name = "wallet_1"
+mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+balance = 100000000
+derivation = "m/44'/5757'/0'/0/1"
+
+[[accounts]]
+name = "wallet_2"
+mnemonic = "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+balance = 100000000
+derivation = "m/44'/5757'/0'/0/2"

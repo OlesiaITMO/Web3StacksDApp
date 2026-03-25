@@ -1,17 +1,25 @@
+---
 id: 0
 name: Testnet deployment
 network: testnet
-stacks-node: https://api.testnet.hiro.so
-bitcoin-node: http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
 plan:
   batches:
-  - id: 0
-    transactions:
-    - transaction-type: contract-publish
-      contract-name: lab-token
-      expected-sender: STRYVQTQTJDG23GK2DF3K03SK6MQ0ER3MNM7NAHJ
-      cost: 7900
-      path: contracts\lab-token.clar
-      anchor-block-only: true
-      clarity-version: 4
-    epoch: '3.3'
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: lab-token-2
+            expected-sender: STA1EXC25DJHACX60A8CRCARTPB1VVS7GX9KR6TG
+            cost: 15480
+            path: "contracts\\lab-token-2.clar"
+            anchor-block-only: true
+            clarity-version: 4
+        - contract-publish:
+            contract-name: liquidity-pool
+            expected-sender: STA1EXC25DJHACX60A8CRCARTPB1VVS7GX9KR6TG
+            cost: 82030
+            path: "contracts\\liquidity-pool.clar"
+            anchor-block-only: true
+            clarity-version: 4
+      epoch: "3.3"

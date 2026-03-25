@@ -3,7 +3,7 @@
     "target": "ESNext",
     "useDefineForClassFields": true,
     "module": "ESNext",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "skipLibCheck": true,
 
     "moduleResolution": "bundler",
@@ -20,6 +20,7 @@
   },
   "include": [
     "node_modules/@stacks/clarinet-sdk/vitest-helpers/src",
+    "src",
     "tests"
   ]
 }

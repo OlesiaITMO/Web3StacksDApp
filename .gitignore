@@ -1,3 +1,11 @@
 .env
 .env.*
 settings/
+node_modules/
+dist/
+.cache/
+coverage/
+
+settings/Testnet.toml
+settings/Mainnet.toml
+settings/Devnet.toml
