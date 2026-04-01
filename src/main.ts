@@ -437,7 +437,12 @@ function bindEvents() {
     event.preventDefault();
     void withBusy(async () => {
       const lpAmount = parseAmountInput(getInputValue("remove-liquidity-amount"));
-      await executeContractCall(state.config.poolContractName, "remove-liquidity", [Cl.uint(lpAmount)]);
+      await executeContractCall(
+        state.config.poolContractName,
+        "remove-liquidity",
+        [Cl.uint(lpAmount)],
+        { postConditionMode: "allow" }
+      );
     });
   });
 
@@ -453,7 +458,7 @@ function bindEvents() {
         "swap-stx-for-token",
         [Cl.uint(stxIn), Cl.uint(minOut)],
         {
-          postConditionMode: "deny",
+          postConditionMode: "allow",
           postConditions: [Pc.principal(sender).willSendEq(stxIn).ustx()],
         }
       );
@@ -472,7 +477,7 @@ function bindEvents() {
         "swap-token-for-stx",
         [Cl.uint(tokenIn), Cl.uint(minOut)],
         {
-          postConditionMode: "deny",
+          postConditionMode: "allow",
           postConditions: [
             Pc.principal(sender).willSendEq(tokenIn).ft(
               contractId(state.config.contractAddress, state.config.tokenContractName),
